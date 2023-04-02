@@ -10,6 +10,23 @@ export default function Home({ allPostsData }) {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+
+        {/*
+        //*for seo
+        //* https://nextjs.org/learn/seo/crawling-and-indexing/metatags 
+        */}
+        {/* <meta name="robots" content="noindex,nofollow" key="noindexnofollow" />
+        <meta name="googlebot" content="noindex,nofollow" key="googlebot" />
+        <meta name="google" content="nositelinkssearchbox" key="sitelinks" />
+        <meta name="google" content="notranslate" key="notranslate" /> 
+        //* https://nextjs.org/learn/seo/crawling-and-indexing/canonical
+        <link
+          rel="canonical"
+          href="https://example.com/blog/original-post"
+          key="canonical"
+        /> 
+        */}
+
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
@@ -54,6 +71,7 @@ export async function getStaticProps() {
 }
 
 //* use getServerSideProps for Server Side Rendering
+//* https://nextjs.org/learn/seo/rendering-and-ranking/url-structure
 //* https://nextjs.org/learn/basics/data-fetching/request-time
 // export async function getServerSideProps(context) {
 //   return {
