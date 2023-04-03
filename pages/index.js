@@ -11,6 +11,28 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
 
+        {/* 
+      //* https://nextjs.org/learn/seo/rendering-and-ranking/metadata
+       */}
+        <meta
+          name="description"
+          content="Check out iPhone 12 XR Pro and iPhone 12 Pro Max. Visit your local store and for expert advice."
+          key="desc"
+        />
+       
+       {/* 
+       //* https://nextjs.org/learn/seo/rendering-and-ranking/metadata
+       */}
+        <meta property="og:title" content="Social Title for Cool Page" />
+        <meta
+          property="og:description"
+          content="And a social description for our cool page"
+        />
+        <meta
+          property="og:image"
+          content="https://example.com/images/cool-page.jpg"
+        />
+
         {/*
         //*for seo
         //* https://nextjs.org/learn/seo/crawling-and-indexing/metatags 
@@ -26,7 +48,6 @@ export default function Home({ allPostsData }) {
           key="canonical"
         /> 
         */}
-
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
